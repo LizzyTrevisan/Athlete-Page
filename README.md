@@ -17,22 +17,24 @@ Repository of Athlete Page
 
 
 
-Athlete Page HTML Project
+## Athlete Page HTML Project
 ![Screenshot 2024-07-22 131710.png](https://raw.githubusercontent.com/LizzyTrevisan/Athlete-Page/refs/heads/main/pictures/Rebecca%20Andrade.webp)
 
 ## Home Page: 
-
+Welcome to this page of Rebeca Andara, showcasing achievements and personal journey highlights.
 
 ## About Page:
+Discover the inspiring story behind the gymnastic Rebeca Andrade who was one of the top star athletes in Paris 2024 Olympics. 
+Learn about her philosophy, medals achieved, and her dedication to excellence.
 
 ## Medals Page: 
+Explore Rebeca Andrade's impressive medal collection, from her international competitions, along with personal milestones.
 
-
-## SContact Page:
+## Contact Page:
+Created to showcase the usage of Forms in HTML.
 
 ## Technology Stack:
-
-Language: HTML inline 
+Language: Simple first project wiht HTML inline and CSS
 Framework: Visual Studio
 
 

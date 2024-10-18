@@ -18,6 +18,7 @@ Repository of Athlete Page
 
 
 ## Athlete Page HTML Project
+![Screenshot 2024-07-22 131710.png](https://raw.githubusercontent.com/LizzyTrevisan/Athlete-Page/refs/heads/main/Screenshot%202024-10-18%20174514.png)
 ![Screenshot 2024-07-22 131710.png](https://raw.githubusercontent.com/LizzyTrevisan/Athlete-Page/refs/heads/main/pictures/Rebecca%20Andrade.webp)
 
 ## Home Page: 
@@ -34,7 +35,7 @@ Explore Rebeca Andrade's impressive medal collection, from her international com
 Created to showcase the usage of Forms in HTML.
 
 ## Technology Stack:
-Language: Simple first project wiht HTML inline and CSS
+Language: Simple first project wiht HTML.
 Framework: Visual Studio
 
 

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Athlete Profile Page</title>
+
+
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0; 
+            background-color: rgba(201, 118, 118, 0.8);
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgba(196, 124, 124, 0.8);
+            max-width: 100%;
+           
+           
+        }
+
+        header {
+            background-color: rgba(201, 118, 118, 1);
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        } */
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            transition: background-color 0.3s;
+        }
+
+     
+        .nav{
+            align-items: center;
+            gap: 30px;
+            height: 50px;
+            justify-content: center;
+            max-width: auto;
+            display: flex;
+        }
+        .menu{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            box-shadow: 0px 2px 4px rgba(60, 60, 60, 0.3);
+        }
+
+        .anchor {
+            position: relative;
+            cursor: pointer;
+            color: #efefee;
+            font-size: 28px;
+            padding: 0.5rem 1rem;
+            transition: color 0.25s;
+            align-items: center;
+            justify-content: center;
+
+        }
+        .anchor::after{
+            position: absolute;
+            content: " ";
+            inset: 0;
+            background: white;
+            scale: 1 0;
+            z-index: -1;
+            transition: 0.45s;
+            border-radius: 10px;
+
+        }
+        .anchor:hover{
+        color: rgba(196, 124, 124, 0.8);
+
+        }
+
+        .anchor:hover::after{
+            scale: 1 1;
+
+        }
+
+        .container {
+            color: rgba(196, 124, 124, 0.8);
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: rgba(201, 118, 118, 0.8)
+        }
+
+        .images {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .images img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px gray;
+            filter: blur(0.9);
+        }
+
+        .text-block {
+            margin-bottom: 20px;
+            padding: 15px;
+          
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            
+        }
+
+
+        th, td {
+            padding: 12px;
+            margin-bottom: 20px;
+            border-collapse: collapse;
+            text-align: center;
+            border: 1px solid #ddd;
+            color: white;
+            background-color: rgba(201, 118, 118, 0.8);
+        }
+    
+
+        .scroll-links {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .scroll-links a {
+            text-decoration: none;
+            color: rgba(201, 118, 118, 0.8);
+            font-weight: bold;
+            padding: 8px 16px;
+            background-color: #e2e2e2;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .scroll-links a:hover {
+            background-color: #ccc;
+            color: white;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: rgba(201, 118, 118, 0.8);
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+            .images {
+                flex-direction: column;
+                align-items: center;
+        }
+        .form-group {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10pxpx;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 3px solid  #e2e2e2;
+            border-radius: 6px;
+        }
+
+        .form-group button {
+            background-color:  #e2e2e2;
+            color: rgba(201, 118, 118, 0.8);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: large;
+        }
+
+        .form-group button:hover {
+            background-color: #ccc;
+           
+        }    
+    </style>
+</head>
+
+<body>
+    <a id="top"></a>
+    <header>
+        <h1 style="color: white; font-size: 60px;">Athlete Profile</h1>
+        <nav>
+            <ul id="menu" class="menu">
+              <li id="home" class="nav" style="display: inline-block">
+                <a class="anchor" href="index.html">Home</a>
+              </li>
+              <li id="about" class="nav" style="display: inline-block">
+                <a class="anchor" href="#">About</a>
+              </li>
+              <li id="medals" class="nav" style="display: inline-block">
+                <a class="anchor" href="medals.html">Medals</a>
+              </li>
+              <li id="contact" class="nav" style="display: inline-block">
+                <a class="anchor" href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </nav>
+    </header>
+
+    <div class="container">
+        <div class="images">
+            <img src="https://news.panasonic.com/uploads/tmg_block_page_image/file/16998/image-1.jpg" alt="URL Video">
+        </div>
+
+        <div class="scroll-links">
+
+            <a href="#bottom"><span style="color:rgba(201, 118, 118, 0.8);">Go to Bottom</span></a>
+            </div>
+        <hr>
+        <div class="text-block">
+            <h2>Biography</h2>
+            <h2>Rebeca Andrade</h2>
+<p>Full name	Rebeca Rodrigues de Andrade, Nickname(s) <b>"Rebe"</b> Born 8 May 1999 (age 25) Guarulhos, São Paulo, Brazil.</p>
+
+<ul>
+    <li>Height	151 cm (4 ft 11 in). </li>
+    <li>Discipline	Women's artistic gymnastics
+        Level</li>
+    <li>Senior International Elite </li>
+    <li>Years on national team	2012–present (BRA)</li>
+    <li>Club	Clube de Regatas do Flamengo[2]</li>
+    <li>
+        Music:
+        <p>2013: "Sway"
+            2014–2016: "Crazy in Love" and "Single Ladies"
+            2019–2022: "Toccata and Fugue in D minor, BWV 565" and "Baile de Favela"
+            2023–present: "End of Time", "Movimento da Sanfoninha" and "Baile de Favela"</p>
+    </li>
+</ul>
+
+
+<p>Rebeca Rodrigues de Andrade is the most decorated Brazilian and Latin American gymnast of all time, as well as the most decorated Brazilian Olympian in any discipline. In the all-around, she is the 2022 World champion, a two-time Olympic silver medalist (2020, 2024), the 2023 World silver medalist, and the 2021 Pan American champion. On vault, she is the 2020 Olympic gold medalist, the 2024 Olympic silver medalist, a two-time World Champion (2021, 2023), and the 2023 Pan American Games champion. <cite>"Rebeca Andrade." Wikipedia, the free encyclopedia. Last modified October 9, 2024. https://en.wikipedia.org/wiki/Rebeca_Andrade.</cite> </p>
+<p>She led the Brazilian team to its first ever team medals at the 2023 World Championships (silver) and the 2024 Olympics (bronze), as well as the gold medal at the 2021 Pan American Championships. She won the gold medal at the 2024 Olympics in the floor exercise.<cite>"Rebeca Andrade." Wikipedia, the free encyclopedia. Last modified October 9, 2024. https://en.wikipedia.org/wiki/Rebeca_Andrade.</cite> </p>
+
+    <hr>
+        </div>
+
+        <div class="text-block">
+        <h2>Achievements</h2>
+    <p>
+        Andrade is the first Brazilian female gymnast to medal at an Olympic Games and only the second Brazilian woman to win a gold medal at the World Artistic Gymnastics Championships. Andrade is one of only 11 female gymnasts to have medalled on every event in the history of World Championships, and one of only three gymnasts to have done so in the 21st century, alongside Simone Biles and Aliya Mustafina.<cite>"Rebeca Andrade." Wikipedia, the free encyclopedia. Last modified October 9, 2024. https://en.wikipedia.org/wiki/Rebeca_Andrade.</cite> </p>
+
+
+        </p>
+        <p>""I talk a lot with my therapist, and I try to take care of my mind and my body to the best of my abilities to create the balance I need to perform very calmly, without pressure, without feeling an obligation to bring medals back home. My job is just to compete, and I do it because I love it and because I want it. People tell me I look peaceful and serene [during competition]. That’s because I’m there doing my job, like every other human being has their job to do. We can only hope to do our share and work our hardest to try to achieve the results we want."– <cite>WAG. "A Lovely Message from Rebeca Andrade." Reddit. Posted May 19, 2013. Accessed October 9, 2024. https://www.reddit.com/r/Gymnastics/comments/1elpdgq/a_lovely_message_from_rebeca_andrade/</cite></p>
+    </div>
+        <hr>
+        <div class="text-block">
+            <h2>Philosophy</h2>
+        <p>
+                Rebeca Andrade—a Panasonic GREEN IMPACT ambassador
+        2022 world all-round champion and history-making gymnast Rebeca Andrade is the first Brazilian woman to win Olympic gold in her sport. Like many among the so-called Generation Z—roughly those aged between 12 and 25—she is passionate about protecting the environment. <cite>"Panasonic Accelerates Its Smart City Initiatives." Panasonic Newsroom, September 26, 2023. Accessed October 9, 2024. https://news.panasonic.com/global/stories/14349.</cite></p></p>
+
+        <p>
+        Many of the participants admitted that ESG in particular was a new concept for them. Said Rebeca: “When I first read about ESG, it took me a while to understand the meaning of each of the letters. But once you understand them, it gets easier to know how you can put the ideas behind them into practice.” <cite>Receba</cite><cite>"Panasonic Accelerates Its Smart City Initiatives." Panasonic Newsroom, September 26, 2023. Accessed October 9, 2024. https://news.panasonic.com/global/stories/14349.</cite></p>
+
+        <p>
+        One of the influencers helpfully explained that ESG is basically a new way of defining sustainability. “The ‘E’ aspect is about companies minimizing the impact they have on the local environment; the ‘S’ part is about companies paying attention to the social needs of their local communities.” She added, “The ‘G’ aspect—governance—is a new perspective; it’s about companies making their sustainability efforts more transparent to their shareholders and encouraging other companies in their supply chain to embrace sustainability.”
+        <cite>"Panasonic Accelerates Its Smart City Initiatives." Panasonic Newsroom, September 26, 2023. Accessed October 9, 2024. https://news.panasonic.com/global/stories/14349.</cite></p>
+    </div>
+  
+
+    <div class="scroll-links">
+        <a href="#top">Go to Top</a>
+    </div>
+    <br>
+
+    <footer id="bottom">
+        <p>&copy; 2024 Athlete Profile. Leiziane Trevisan Dardin.</p>
+    </footer>
+
+  
+
+</body>
+
+</html>

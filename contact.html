@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Athlete Profile Page</title>
+
+
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0; 
+            background-color: rgba(201, 118, 118, 0.8);
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgba(196, 124, 124, 0.8);
+            max-width: 100%;
+           
+           
+        }
+
+        header {
+            background-color: rgba(201, 118, 118, 1);
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        } */
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            transition: background-color 0.3s;
+        }
+
+     
+        .nav{
+            align-items: center;
+            gap: 30px;
+            height: 50px;
+            justify-content: center;
+            max-width: auto;
+            display: flex;
+        }
+        .menu{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            box-shadow: 0px 2px 4px rgba(60, 60, 60, 0.3);
+        }
+
+        .anchor {
+            position: relative;
+            cursor: pointer;
+            color: #efefee;
+            font-size: 28px;
+            padding: 0.5rem 1rem;
+            transition: color 0.25s;
+            align-items: center;
+            justify-content: center;
+
+        }
+        .anchor::after{
+            position: absolute;
+            content: " ";
+            inset: 0;
+            background: white;
+            scale: 1 0;
+            z-index: -1;
+            transition: 0.45s;
+            border-radius: 10px;
+
+        }
+        .anchor:hover{
+        color: rgba(196, 124, 124, 0.8);
+
+        }
+
+        .anchor:hover::after{
+            scale: 1 1;
+
+        }
+
+        .container {
+            color: rgba(196, 124, 124, 0.8);
+            max-width: 100px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: rgba(201, 118, 118, 0.8)
+        }
+ 
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: rgba(201, 118, 118, 0.8);
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+          
+        .form-group {
+            width: 60%;
+            margin: 20px auto;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10pxpx;
+            box-shadow: 1px solid #ccc;
+            box-sizing: border-box;
+           
+           
+        }
+
+        .form-group input, .form-group textarea {
+            color: rgba(201, 118, 118, 0.8);
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 3px solid  #e2e2e2;
+            font-size: 16px;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .form-group button {
+           
+            background-color:  #e2e2e2;
+            color: rgba(201, 118, 118, 0.8);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: large;
+            text-align: center;
+           
+        }
+        .button-container{
+            display: flex;
+            justify-content: center;
+        }
+
+        .form-group button:hover {
+            background-color: #ccc;
+           
+        }    
+    </style>
+</head>
+
+<body>
+    <a id="top"></a>
+    <header>
+        <h1 style="color: white; font-size: 60px;">Athlete Profile</h1>
+        <nav>
+            <ul id="menu" class="menu">
+              <li id="home" class="nav" style="display: inline-block">
+                <a class="anchor" href="index.html">Home</a>
+              </li>
+              <li id="about" class="nav" style="display: inline-block">
+                <a class="anchor" href="about.html">About</a>
+              </li>
+              <li id="medals" class="nav" style="display: inline-block">
+                <a class="anchor" href="medals.html">Medals</a>
+              </li>
+              <li id="contact" class="nav" style="display: inline-block">
+                <a class="anchor" href="#">Contact</a>
+              </li>
+            </ul>
+          </nav>
+    </header>
+
+    <div>
+    <h2 style="color: white; font-size: xx-large;">Contact</h2>
+    
+    <form>
+    <div class="form-group" >
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" >
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message"></textarea>
+        <div class="button-container">
+        <button type="submit">Submit</button>
+        </div>
+        </div>
+    </form>
+
+    <footer id="bottom">
+        <p>&copy; 2024 Athlete Profile. Leiziane Trevisan Dardin.</p>
+    </footer>
+
+
+
+</body>
+
+</html>
+

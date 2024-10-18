@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=  <hr>
+
+
+</head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Athlete Profile Page</title>
+
+
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0; 
+            background-color: rgba(201, 118, 118, 0.8);
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgba(196, 124, 124, 0.8);
+            max-width: 100%;
+           
+           
+        }
+
+        header {
+            background-color: rgba(201, 118, 118, 1);
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        } */
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            transition: background-color 0.3s;
+        }
+
+     
+        .nav{
+            align-items: center;
+            gap: 30px;
+            height: 50px;
+            justify-content: center;
+            max-width: auto;
+            display: flex;
+        }
+        .menu{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            box-shadow: 0px 2px 4px rgba(60, 60, 60, 0.3);
+        }
+
+        .anchor {
+            position: relative;
+            cursor: pointer;
+            color: #efefee;
+            font-size: 28px;
+            padding: 0.5rem 1rem;
+            transition: color 0.25s;
+            align-items: center;
+            justify-content: center;
+
+        }
+        .anchor::after{
+            position: absolute;
+            content: " ";
+            inset: 0;
+            background: white;
+            scale: 1 0;
+            z-index: -1;
+            transition: 0.45s;
+            border-radius: 10px;
+
+        }
+        .anchor:hover{
+        color: rgba(196, 124, 124, 0.8);
+
+        }
+
+        .anchor:hover::after{
+            scale: 1 1;
+
+        }
+
+        .container {
+            color: rgba(196, 124, 124, 0.8);
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: rgba(201, 118, 118, 0.8)
+        }
+
+        .images {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .images img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px gray;
+          
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            
+        }
+
+
+        th, td {
+            padding: 12px;
+            margin-bottom: 20px;
+            border-collapse: collapse;
+            text-align: center;
+            border: 1px solid #ddd;
+            color: white;
+            background-color: rgba(201, 118, 118, 0.8);
+        }
+    
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: rgba(201, 118, 118, 0.8);
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .images {
+                flex-direction: column;
+                align-items: center;
+        }
+        .form-group {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10pxpx;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 3px solid  #e2e2e2;
+            border-radius: 6px;
+        }
+
+        .form-group button {
+            background-color:  #e2e2e2;
+            color: rgba(201, 118, 118, 0.8);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: large;
+        }
+
+        .form-group button:hover {
+            background-color: #ccc;
+           
+        }    
+
+        iframe{
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px gray;
+          
+        }
+    </style>
+</head>
+
+<body>
+    <a id="top"></a>
+    <header>
+        <h1 style="color: white; font-size: 60px;">Athlete Profile</h1>
+        <nav>
+            <ul id="menu" class="menu">
+              <li id="home" class="nav" style="display: inline-block">
+                <a class="anchor" href="index.html">Home</a>
+              </li>
+              <li id="about" class="nav" style="display: inline-block">
+                <a class="anchor" href="about.html">About</a>
+              </li>
+              <li id="medals" class="nav" style="display: inline-block">
+                <a class="anchor" href="#">Medals</a>
+              </li>
+              <li id="contact" class="nav" style="display: inline-block">
+                <a class="anchor" href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </nav>
+    </header>
+
+    <div class="container">
+        <div class="images">
+            <img src="https://imagens.ebc.com.br/4YU-ENvqqUdYVZ9e8enKlosZ54M=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2024/08/05/2024-08-05t140841z_969111546_up1ek8513afq6_rtrmadp_3_olympics-2024-artisticgymnastics.jpg?itok=EM-r9Gjr" alt="Rebeca Medal">
+            <iframe width="1000" height="515" src="https://www.youtube.com/embed/YKKnsEGb4oA?si=EPnStjNzAXGCoYiI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+     
+        
+        <h2>Seasonal Statistics</h2>
+    
+                
+
+        <table style="width:100%"> 
+            <tr>
+                <th>Championships</th>
+                <th> Medals</th>
+                <th>Year</th>
+             
+                      
+               </th>
+               <tr>
+                <td>Olympics - Tokyo Vault</td>
+                <td>Gold</td>
+            
+                <td>2020</td>
+              </tr>
+              <tr>
+                <td>Pan American - Rio de Janeiro</td>
+                <td>Gold</td>
+                <td>2021</td>
+              </tr>
+              <tr>
+                <td>World Championships</td>
+                <td>Gold</td>
+                <td>2022</td>
+              </tr>
+              <tr>
+                <td>Olympics - Paris</td>
+                <td>Gold</td>
+                <td>2024</td>
+              </tr>
+         </table>
+
+    </div>
+
+<footer id="bottom">
+    <p>&copy; 2024 Athlete Profile. Leiziane Trevisan Dardin.</p>
+</footer>
+
+</body>
+</html>

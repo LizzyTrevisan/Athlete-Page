@@ -18,7 +18,7 @@ Repository of Athlete Page
 
 
 Athlete Page HTML Project
-
+![Screenshot 2024-07-22 131710.png](https://raw.githubusercontent.com/LizzyTrevisan/Athlete-Page/refs/heads/main/pictures/Rebecca%20Andrade.webp)
 
 ## Home Page: 
 

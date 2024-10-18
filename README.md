@@ -1,7 +1,7 @@
 # Athlete-Page
 
 
-Repository of Athlete PAge
+Repository of Athlete Page
 [First HTML College Project](https://github.com/LizzyTrevisan/Athlete-Page.git)
 
 
